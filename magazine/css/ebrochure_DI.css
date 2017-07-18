@@ -1,0 +1,173 @@
+body {
+
+}
+@font-face {
+    font-family: Aspire;
+    src: urfont-familyl('../fonts/Aspire-DemiBold.ttf');
+}
+@font-face {
+    font-family: COPRGTB;
+    src: url('../fonts/COPRGTB.TTF');
+}
+@font-face {
+    : COPRGTL;
+    src: url('../fonts/COPRGTL.TTF');
+}
+@font-face {
+    font-family:LatoLight;
+    src: url('../fonts/Lato-Black.ttf');
+}
+@font-face {
+    font-family: LatoBoldItalic;
+    src: url('../fonts/Lato-BoldItalic.ttf');
+}
+@font-face {
+    font-family: LatoItalic;
+    src: url('../fonts/Lato-Italic.ttf');
+}
+@font-face {
+    font-family: LatoRegular;
+    src: url('../fonts/Lato-Light.ttf');
+}
+@font-face {
+    font-family: LatoLightItalic;
+    src: url('../fonts/Lato-LightItalic.ttf');
+}
+@font-face {
+    font-family: MinionProRegular;
+    src: url('../fonts/MinionPro-Regular.otf');
+}
+@font-face {
+    font-family: TrajanProRegular;
+    src: url('../fonts/TrajanPro-Regular.otf');
+}
+.maintitle1{
+	font-family: LatoRegular;
+	font-size:21px;
+	color: #FFFFFF;
+}
+.maintitle2{
+	font-family: MinionProRegular;
+	font-size: 40px;
+	color: #003851;
+}
+.maintitle3{
+	font-family: Aspire;
+	font-size: 46px;
+	color: #FF0000;
+}
+.frontPage{
+	position: absolute;
+	left: 10px;
+	top: 60px;
+	width: 100%; 
+	height:100%; 
+	text-align:center;
+}
+.indexPage{
+	position: absolute;
+	top:20px;
+	left: 20px;
+	width: 100%; 
+	height:100%; 
+	text-align:left;
+}
+.indexPagetitle{
+	font-family: LatoBoldItalic;
+	font-size: 26px;
+	color: #BFFDFF;
+}
+.indexPageText{
+	position:absolute;
+	left:-35px;
+	font-family: LatoItalic;
+	font-size: 16px;
+	width: 50%;
+	color: #BFFDFF;
+}
+.indexPageText li{	
+	padding-bottom:15px;
+	list-style-type: none;	
+}
+.aboutOrgTitle{
+	font-family: LatoBoldItalic;
+	font-size: 26px;
+}
+.aboutOrgText{
+	font-family: LatoItalic;
+	font-size: 16px;
+}
+.aboutOrgL{
+	position:absolute;
+	top:312px;
+	left:307px;	
+	/*right:20px;*/
+	width: 30%;
+	color: #003851;
+}
+.aboutOrgR p {
+    text-indent:55px;
+}
+.aboutOrgR{
+	position:absolute;	
+	top:280px;
+	left:10px;	
+	width: 95%;
+	color: #003851;
+}
+.aboutGuruTitle{
+	font-family: LatoItalic;
+	font-size: 28px;
+}
+.aboutGuruText{
+	font-family: LatoItalic;
+	font-size: 18px;
+}
+.aboutGuru p {
+    text-indent:55px;
+}
+.aboutGuru{
+	position:absolute;	
+	top:375px;
+	left:10px;	
+	width: 95%;
+	color: #FFFFFF;
+}
+.AbtDITitele{
+	position:absolute;	
+	top:25px;
+	left:200px;	
+	width: 150%;
+	color: #000000;
+}
+.AbtDITiteleFontB{	
+	font-family: LatoItalic;
+	font-size: 38px;
+}
+.AbtDITiteleFont{	
+	font-family: LatoItalic;
+	font-size: 30px;
+}
+.pagetitle{
+	font-family: LatoBoldItalic;
+	font-size: 48px;
+}
+.pageText{
+	font-family: LatoBoldItalic;
+	font-size: 48px;
+}
+.brainAanimation{
+	position:fixed;
+	width: 230px;
+	height: 210px;
+	left:231px;
+	top:174px;
+	background-color: green; 
+}
+.animation{
+	position:absolute;
+	left:0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
