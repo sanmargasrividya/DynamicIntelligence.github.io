@@ -49,7 +49,7 @@ function loadPage(page, pageElement) {
 	// Load the page
 
 	img.attr('src', 'magazine/pages/' +  page + '.jpg');
-	if(page == 10 || page == 6 || page == 9 ||page==16|| page == 24|| page == 25){
+	if(page == 10 || page == 6 || page == 9 ||page==16|| page == 24|| page == 25 || page == 31){
 		//pageElement.find('.gradient').load('magazine/HTMLPages/Page' +  page + '.html');
 		$(pageElement).load('magazine/HTMLPages/Page' +  page + '.html');
 	}
