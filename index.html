@@ -5,15 +5,14 @@
 <!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<title>Dynamic Cosmic Intelligence For Children</title>
-	<link rel="stylesheet" href="magazine/css/reset.min.css">
-	<link rel="stylesheet" href="magazine/css/bubbles.css">
-	<meta name="viewport" content="width = 1050, user-scalable = no" />
-	<script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
-	<script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
-	<script type="text/javascript" src="lib/hash.js"></script>
+<title>Dynamic Cosmic Intelligence For Children</title>
+<link rel="stylesheet" href="magazine/css/reset.min.css">
+<link rel="stylesheet" href="magazine/css/bubbles.css">
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
+<script type="text/javascript" src="lib/hash.js"></script>
 </head>
-<!--<body style="background-image:url(http://127.0.0.1:8020/DynamicIntelligence/e_brochure_js/samples/magazine/pics/images.jpg)">-->
 <body>
 <div id="canvas" class="bubbles">
 
@@ -185,7 +184,15 @@ function loadApp() {
 					}	
 					}
 					*/
-					if(page !== 10 && page !== 11){
+					if (page == 2 || page == 3) {
+					    if (activateindexPage !== undefined) {
+					        activateindexPage();
+					    }
+					}
+					else if (page !== 2 && page !== 3) {
+                        disableIndexPage();
+					}
+					/*if(page !== 10 && page !== 11){
 						if(removeRocketAnimation !== undefined){
 							removeRocketAnimation();
 						}
@@ -194,8 +201,8 @@ function loadApp() {
 						if(rocketAnimation !== undefined){
 							rocketAnimation();
 						}
-					}	
-					if(page !== 6 && page !== 7){
+					}*/	
+					/*if(page !== 6 && page !== 7){
 						if(removeBrainAnimation !== undefined){
 							removeBrainAnimation();
 						}
@@ -204,18 +211,24 @@ function loadApp() {
 						if(brainAnimation !== undefined){
 							brainAnimation();
 						}
-					}		
-					if(page !== 24 && page !== 25){
+					}	*/	
+					/*if(page !== 24 && page !== 25){
 						if(removeJoyAnimation !== undefined){
 							removeJoyAnimation();
+						} 
+						if (removeICantAnimation !== undefined) {
+						    removeICantAnimation();
 						}
 					}
 					else if(page == 24 || page == 25){
 						if(joyAnimation !== undefined){
-							joyAnimation();
+						    joyAnimation();
 						}
-					}
-					if(page !== 8 && page !== 9){
+						if (iCantAnimation !== undefined) {
+						    iCantAnimation();
+						}						
+					}*/
+					/*if(page !== 8 && page !== 9){
 						if(removeBulbAnimation !== undefined){
 							removeBulbAnimation();
 						}
@@ -224,7 +237,7 @@ function loadApp() {
 						if(bulbAnimation !== undefined){
 							bulbAnimation();
 						}
-					}							
+					}*/							
 				},
 
 				missing: function (event, pages) {
@@ -431,11 +444,11 @@ function loadApp() {
 	
 	// Regions
 
-	/*if ($.isTouch) {
+	if ($.isTouch) {
 		$('.magazine').bind('touchstart', regionClick);
 	} else {
 		$('.magazine').click(regionClick);
-	}*/
+	}
 
 	// Events for the next button
 
@@ -529,7 +542,7 @@ yepnope({
 	test : Modernizr.csstransforms,
 	yep: ['lib/turn.js'],
 	nope: ['lib/turn.html4.min.js'],
-	both: ['lib/zoom.min.js', 'magazine/js/magazine.js','magazine/js/rocketAnimation.js','magazine/js/brainAnimation.js','magazine/js/joyAnimation.js','magazine/js/bulbAnimation.js', 'magazine/css/magazine.css','magazine/css/ebrochure_DI.css'],
+	both: ['lib/zoom.min.js', 'magazine/js/indexPage.js', 'magazine/js/magazine.js', 'magazine/css/magazine.css', 'magazine/css/ebrochure_DI.css'],
 	complete: loadApp
 });
 

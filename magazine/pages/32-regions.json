@@ -1,0 +1,45 @@
+[{
+	"x":100,
+	"y":400,
+	"width":255,
+	"height":30,
+	"class":"link",
+	"data":
+		{
+			"url": "http://www.siddhasanmarga.org/"
+		}
+},
+{
+	"x":160,
+	"y":435,
+	"width":43,
+	"height":45,
+	"class":"link",
+	"data":
+		{
+			"url": "https://mobile.twitter.com/siddha_sanmarga/"
+		}
+},
+{
+	"x":207,
+	"y":435,
+	"width":43,
+	"height":45,
+	"class":"link",
+	"data":
+		{
+			"url": "https://www.facebook.com/siddhasanmarga/"
+		}
+},
+{
+	"x":255,
+	"y":435,
+	"width":45,
+	"height":45,
+	"class":"link",
+	"data":
+		{
+			"url": "https://www.youtube.com/channel/UC3_1YonBfJkpj9FJMIo5XAg"
+		}
+}
+]

@@ -148,7 +148,7 @@ body{
 	width:100px;
 	height:600px;
 	position:absolute;
-	top:0;
+	top:0;	
 	background-size:100%;
 	cursor: pointer;
 }
@@ -184,6 +184,7 @@ body{
 
 .magazine-viewport .previous-button-hover,
 .magazine-viewport .previous-button-down{
+	left:-100px;
 	background-image:url(../pics/arrow-prev.png);
 	background-position:0px 284px;
 	background-repeat:no-repeat;
@@ -196,6 +197,7 @@ body{
 
 .magazine-viewport .next-button-hover,
 .magazine-viewport .next-button-down{
+	right:-100px;
 	background-image:url(../pics/arrow-next.png);
 	background-position:0px 284px;
 	background-repeat:no-repeat;
@@ -414,6 +416,10 @@ body{
    background-size:100% 100%;
    padding:0;
    margin:0;
+   -webkit-animation: liftDoumbles 2s;  /* Safari 4.0 - 8.0 */
+   -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */   
+    animation: liftDoumbles 2s;
+    animation-iteration-count: infinite;
  }
  #brainHands {
    position: absolute;
@@ -426,6 +432,10 @@ body{
    height:100%;
    padding:0;
    margin:0;
+   -webkit-animation: stretchHands 2s;  /* Safari 4.0 - 8.0 */
+   -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation: stretchHands 2s;
+    animation-iteration-count: infinite;
 }
 #brainBase {
    position: absolute;
@@ -439,6 +449,45 @@ body{
    padding:0;
    margin:0;
 }
+@-webkit-keyframes liftDoumbles {
+     from {
+    	top: 0px;
+    }
+    to {
+    	top: -18%;    	
+    }
+}
+
+@keyframes liftDoumbles {
+    from {
+    	top: 0px;
+    }
+    to {
+    	top: -18%;    	
+    }
+}
+
+@-webkit-keyframes stretchHands {
+     from {
+    	top: 0%;
+        height:200%;
+    }
+    to {
+    	top: -45%; 
+        height:200%;   	
+    }
+}
+
+@keyframes stretchHands {
+       from {
+    	top: 0%;
+        height:100%;
+    }
+    to {
+    	top: -45%;   
+        height:200%; 	
+    }
+}
 /*******************Bulb**********/
 #light-bulb2 {
 	width: 100px;
@@ -446,6 +495,11 @@ body{
 	background-image: url(../animations/lightbulb2.png);
 	background-repeat:no-repeat;
 	background-size:100% 100%;
+    opacity:1;
+    -webkit-animation: lightBulb 2s;  /* Safari 4.0 - 8.0 */
+   -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation: lightBulb 2s;
+    animation-iteration-count: infinite;
 }
 
 #light-bulb {
@@ -457,20 +511,34 @@ body{
 	background-image: url(../animations/lightbulb1.png);
 	background-repeat:no-repeat;
 	background-size:100% 100%;
-	z-index: 800;
+}
+
+@-webkit-keyframes lightBulb {
+    from {    	
+    	opacity:0; 
+    }
+    to {    	
+    	opacity:1;    	
+    }
+}
+
+@keyframes lightBulb {
+     from {    	
+    	opacity:0; 
+    }
+    to {    	
+    	opacity:1;    	
+    }
 }
 /***************** I Can't *****************/
-
 #iCant_t_image {
   	position:relative;
  	width:100%;
 	height:100%;
-    -webkit-animation: paperTear 5s;  /* Safari 4.0 - 8.0 */
+    -webkit-animation: paperTear 2s;  /* Safari 4.0 - 8.0 */
     -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-    -webkit-animation-delay: 1s;
-    animation: paperTear 3s;
+    animation: paperTear 2s;
     animation-iteration-count: infinite;
-    animation-delay: 1s;
 }
 
 #iCant_t_image img {
@@ -487,7 +555,7 @@ body{
     	opacity:1; 
     }
     to {
-    	top: 70px;
+    	top: 25%;
     	opacity:0;
     	-ms-transform: rotate(30deg); /* IE 9 */
 	    -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
@@ -501,14 +569,131 @@ body{
     	opacity:1;
     }
     to {
-    	top: 70px;
+    	top: 25%;
     	opacity:0;
     	-ms-transform: rotate(30deg); /* IE 9 */
 	    -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
 	    transform: rotate(30deg); 
     }
 }
+/************Index List*************/
+.indexList {
+    list-style-type:none;
+    width:100%;
+    height:100%;
+}
+.indexListItem{
+    cursor:pointer;
+    height:10%;
+}
+.indexListItem:hover{
+    background-color:white;
+    opacity:0.1;
+}
+#li1{
+    width:55%;
+}
+#li2{
+    width:71%;
+}
+#li3{
+    width:39%;
+}
+#li4{
+    width:47%;
+}
+#li5{
+    width:72%;
+    height:14%;
+}
+#li6{
+    width:30%;
+}
+#li7{
+    width:36%;
+}
+#li8{
+    width:55%;
+}
+#li9{
+    width:44%;
+}
+/***************************Joy animation*********************/
+#joyEmcon {
+  	position:relative;
+ 	width:100%;
+	height:100%;
+    -webkit-animation: jumpJoyfully 1s;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation: jumpJoyfully 1s;
+    animation-iteration-count: infinite;
+}
 
+#joyEmcon img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes jumpJoyfully {
+    from {
+    	top: 0px;
+    }
+    to {
+    	top: -20%;    	 
+    }
+}
 
+@keyframes jumpJoyfully {
+   from {
+    	top: 0px;
+    }
+    to {
+    	top: -20%;    	 
+    }
+}
+/***********************Rocket boy animation******/
+#rockeytboyAnimation {
+  	position:relative;
+ 	width:100%;
+	height:100%;
+    -webkit-animation: rocketLaunch 2s;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation: rocketLaunch 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
 
+#rocketBoyImage img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rocketLaunch {
+    from {
+        left:0px;
+    	top: 0px;
+    }
+    to {
+        left:-100%;
+    	top: -100%;    	 
+    }
+}
+
+@keyframes rocketLaunch {
+    from {
+        left:0px;
+    	top: 0px;
+    }
+    to {
+        left:-100%;
+    	top: -100%;   	 
+    }
+}
+/***************************************************/
 

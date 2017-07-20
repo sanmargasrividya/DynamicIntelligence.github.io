@@ -48,13 +48,19 @@ function loadPage(page, pageElement) {
 
 	// Load the page
 
-	img.attr('src', 'magazine/pages/' +  page + '.jpg');
-	if(page == 10 || page == 6 || page == 9 ||page==16|| page == 24|| page == 25 || page == 31){
+	
+	if (page == 2 || page == 10 || page == 6 || page == 9 || page == 16 || page == 24 || page == 25 || page == 31) {
 		//pageElement.find('.gradient').load('magazine/HTMLPages/Page' +  page + '.html');
-		$(pageElement).load('magazine/HTMLPages/Page' +  page + '.html');
+		$(pageElement).load('magazine/HTMLPages/Page' +  page + '.html',function(){
+			img.attr('src', 'magazine/pages/' +  page + '.jpg');
+		});
 	}
-	//sindhura
-	//loadRegions(page, pageElement);
+	else{
+		img.attr('src', 'magazine/pages/' +  page + '.jpg');
+	}
+    //sindhura
+	if (page == 32) 
+	    loadRegions(page, pageElement);
 	//sindhura
 	
 }
