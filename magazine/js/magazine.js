@@ -174,37 +174,85 @@ function processRegion(region, regionType) {
 }
 
 // Load large page
-
 function loadLargePage(page, pageElement) {
 	
-	var img = $('<img />');
-
-	img.load(function() {
+	//var img = $('<img />');
+	//img.load(function() {
 
 		var prevImg = pageElement.find('img');
-		$(this).css({width: '100%', height: '100%'});
-		$(this).appendTo(pageElement);
-		prevImg.remove();
+		$(prevImg).css({width: '100%', height: '100%'});
 		
-	});
-
-	// Loadnew page
-	
-	img.attr('src', 'magazine/pages/' +  page + '-large.jpg');
+		//$(prevImg).appendTo(pageElement);
+		//$(this).css({width: '100%', height: '100%'});
+		//$(this).appendTo(pageElement);
+		//prevImg.remove();		
+	//});
+	// Loadnew page	
+	//img.attr('src', 'magazine/pages/' +  page + '-large.jpg');
+	//img.attr('src', 'magazine/pages/' +  page + '.jpg');	
 }
 
 // Load small page
-
 function loadSmallPage(page, pageElement) {
 	
-	var img = pageElement.find('img');
+	//Remove Zoomed large page
+	var prevImg = pageElement.find('img');
+	//prevImg.css({width: '100%', height: '100%'});
+	prevImg.unbind('load');
+	prevImg.remove();
+	
+	// Load new small page
+	var img = $('<img />');
 
-	img.css({width: '100%', height: '100%'});
+	img.mousedown(function(e) {
+		e.preventDefault();
+	});
 
-	img.unbind('load');
-	// Loadnew page
+	img.load(function() {
+		
+		// Set the size
+		$(this).css({width: '100%', height: '100%'});
 
-	img.attr('src', 'magazine/pages/' +  page + '.jpg');
+		// Add the image to the page after loaded
+
+		$(this).appendTo(pageElement);
+
+		// Remove the loader indicator
+		
+		pageElement.find('.loader').remove();
+	});
+
+	// Load the page	
+	if (page == 2 || page == 10 || page == 6 || page == 9 || page == 16 || page == 24 || page == 25 || page == 31) {
+		//pageElement.find('.gradient').load('magazine/HTMLPages/Page' +  page + '.html');
+		$(pageElement).load('magazine/HTMLPages/Page' +  page + '.html',function(){
+			img.attr('src', 'magazine/pages/' +  page + '.jpg');
+			
+			if (page == 2 || page == 3) {
+			   if (activateindexPage !== undefined) {
+			        activateindexPage();
+			    }
+			}
+			else if (page !== 2 && page !== 3) {
+		        disableIndexPage();
+			}		
+		});
+	}
+	else{
+		img.attr('src', 'magazine/pages/' +  page + '.jpg');
+		if (page == 2 || page == 3) {
+		   if (activateindexPage !== undefined) {
+		        activateindexPage();
+		    }
+		}
+		else if (page !== 2 && page !== 3) {
+		     disableIndexPage();
+		}		
+	}
+    //sindhura
+	if (page == 32) 
+	    loadRegions(page, pageElement);
+	//sindhura	
 }
 
 // http://code.google.com/p/chromium/issues/detail?id=128488
@@ -237,12 +285,11 @@ function resizeViewport() {
 
 	$('.magazine').removeClass('animated');
 
-	/*$('.magazine-viewport').css({
+	$('.magazine-viewport').css({
 		width: width,
 		height: height
-	}).
-	zoom('resize');
-    */
+	}).zoom('resize');
+    
 
 	if ($('.magazine').turn('zoom')==1) {
 		var bound = calculateBound({
