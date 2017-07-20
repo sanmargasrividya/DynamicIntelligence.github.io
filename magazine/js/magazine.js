@@ -263,8 +263,8 @@ function resizeViewport() {
 			if ($('.magazine').turn('page')==1)
 				$('.magazine').turn('peel', 'br');
 
-			$('.next-button').css({height: bound.height, backgroundPosition: '-38px '+(bound.height/2-32/2)+'px'});
-			$('.previous-button').css({height: bound.height, backgroundPosition: '-4px '+(bound.height/2-32/2)+'px'});
+			$('.next-button').css({height: bound.height, backgroundPosition: '0px '+(bound.height/2-32/2)+'px'});
+			$('.previous-button').css({height: bound.height, backgroundPosition: '0px '+(bound.height/2-32/2)+'px'});
 		}
 
 		$('.magazine').css({top: -bound.height/2, left: -bound.width/2});
