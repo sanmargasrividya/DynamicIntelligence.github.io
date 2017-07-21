@@ -4,11 +4,11 @@ body{
 	margin:0;
 	padding:0;
 }
-
+/*
 body { min-height:540px; }     
 body[orient="portrait"] { min-height:540px; }
 body[orient="landscape"] { min-height:400px; }
-
+*/
 .magazine-viewport .container{
 	position:absolute;
 	top:50%;
